@@ -140,13 +140,13 @@ Compile and Deploy PerfKit Explorer
 
 1. Compile the application.
 
-         bash compile.sh
+         bash compile.sh --harmony
 
 1. You will now find a `~/projects/PerfKitExplorer/deploy` folder.
 
 1. Deploy PerfKit Explorer to App Engine.
 
-         appcfg.py --oauth2 update deploy
+         appcfg.py update deploy --noauth_local_webserver -A <PROJECT_ID>
 
 1. By default the application will be deployed to a build/version specific to
    your client. For example, with the following values:
